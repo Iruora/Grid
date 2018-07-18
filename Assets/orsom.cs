@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class orsom : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class orsom : MonoBehaviour
     public int gridWidth;
 
     public Vector3 startPosition;
+    
 
     public bool mouseDown;//defines wether the mouse is down or not
     public bool isDrawing;//defines wether we still drawing or not
@@ -64,7 +66,7 @@ public class orsom : MonoBehaviour
     //==============================Draws a line between posA and posB=============================
     public void DrawLine(Vector3 posA, Vector3 posB)
     {
-
+        
         if (mouseDown)
         {
 
@@ -74,7 +76,7 @@ public class orsom : MonoBehaviour
 
                 LineRenderer lineRenderer = lrPF.GetComponent<LineRenderer>();
                 lineRenderer.SetPosition(0, posA);
-                isDrawing = true;
+                //isDrawing = true;
                 if (isDrawing)
                 {
                     print(" drawing");
@@ -86,6 +88,7 @@ public class orsom : MonoBehaviour
         if (!mouseDown)
         {
             isDrawing = false;
+            print(" drawing Finished");
         }
     }
 }
