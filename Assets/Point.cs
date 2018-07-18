@@ -32,12 +32,7 @@ public class Point : MonoBehaviour
         pz = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         pz.z = 0;
         //--------------------------------------------------------------
-
-        //Don't draw unless we click the Point
-        //if (orsomInstance)
-        //    orsom.Instance.DrawLine(transform.position, pz);
         
-
         if (selectedPoints.Count == 2  )
         {
             Point posA = (Point)selectedPoints[0];
@@ -69,9 +64,6 @@ public class Point : MonoBehaviour
     //=================================================================
     private void OnMouseDown()
     {
-        print("Clickeni !");
-        orsomInstance = true;//Now you can draw !
-        orsom.Instance.mouseDown = true;//the mouse is down
         totalClicks++;
         selectedPoints.Add(this);
         print("selected :" + selectedPoints.Count);
@@ -79,10 +71,7 @@ public class Point : MonoBehaviour
     //==================================================================
     private void OnMouseUp()
     {
-        print("Sayabni !");
-        orsomInstance = false;//Stop drawing !
-        orsom.Instance.mouseDown = false;//mouse is up
-        //orsom.Instance.DrawLine(transform.position, pz);//Finnally draw th line from me as a Point toward the mouse position
+        
 
     }
     //==================================================================

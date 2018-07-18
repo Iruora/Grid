@@ -20,26 +20,6 @@ public class orsom : MonoBehaviour
 
     public int[] grid;
     
-    private static orsom _instance;//
-    //================================***************=============================================
-    public static orsom Instance {
-        get {
-            return _instance;
-        }
-    }
-    //============================================================================================
-
-    private void Awake()
-    {
-        if (_instance != null && _instance != this)
-        {
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            _instance = this;
-        }
-    }
     //============================================================================================
     void Start()
     {
@@ -61,34 +41,6 @@ public class orsom : MonoBehaviour
                     obj.AddComponent<CircleCollider2D>().radius = 0.2f;
                 }
             }
-        }
-    }
-    //==============================Draws a line between posA and posB=============================
-    public void DrawLine(Vector3 posA, Vector3 posB)
-    {
-        
-        if (mouseDown)
-        {
-
-            if (!isDrawing)
-            {
-                GameObject lrPF = Instantiate(lineRendererPF);
-
-                LineRenderer lineRenderer = lrPF.GetComponent<LineRenderer>();
-                lineRenderer.SetPosition(0, posA);
-                //isDrawing = true;
-                if (isDrawing)
-                {
-                    print(" drawing");
-                    lineRenderer.SetPosition(1, posB);
-                }
-
-            }
-        }
-        if (!mouseDown)
-        {
-            isDrawing = false;
-            print(" drawing Finished");
         }
     }
 }
