@@ -64,10 +64,7 @@ public class Point : MonoBehaviour
             }
             
         }
-        else
-        {
-            selectedPoints.RemoveRange(0, selectedPoints.Count - 1);
-        }
+        
     }
     //=================================================================
     private void OnMouseDown()
