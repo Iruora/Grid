@@ -36,18 +36,37 @@ public class Point : MonoBehaviour
         //Don't draw unless we click the Point
         //if (orsomInstance)
         //    orsom.Instance.DrawLine(transform.position, pz);
-        if (selectedPoints.Count == 2)
+        
+
+        if (selectedPoints.Count == 2  )
         {
-            GameObject lrPf = Instantiate(lineRendererPF);
-            lineRenderer = lrPf.GetComponent<LineRenderer>();
+            Point posA = (Point)selectedPoints[0];
+            Point posB = (Point)selectedPoints[1];
 
-            Point posA = (Point) selectedPoints[0];
-            Point posB = (Point) selectedPoints[1];
+            float distance = Vector3.Distance(posA.transform.position, posB.transform.position);
+            string dd = (distance == Mathf.Sqrt(2)) ? "SQRT(2)" : distance.ToString();
+            print(dd);
+            if(distance <= Mathf.Sqrt(2))
+            {
+                GameObject lrPf = Instantiate(lineRendererPF);
+                lineRenderer = lrPf.GetComponent<LineRenderer>();
 
-            lineRenderer.SetPosition(0, posA.transform.position);
-            lineRenderer.SetPosition(1, posB.transform.position);
 
-            selectedPoints.Clear();
+                lineRenderer.SetPosition(0, posA.transform.position);
+                lineRenderer.SetPosition(1, posB.transform.position);
+
+                selectedPoints.Clear();
+            }
+            else
+            {
+                selectedPoints.RemoveAt(1);
+                distance = 0;
+            }
+            
+        }
+        else
+        {
+            selectedPoints.RemoveRange(0, selectedPoints.Count - 1);
         }
     }
     //=================================================================
