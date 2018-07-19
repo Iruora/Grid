@@ -42,7 +42,14 @@ public class orsom : MonoBehaviour
                 {
                     //Singleton pattern : the circle colider will have a radius of 0.2f
                     obj.AddComponent<CircleCollider2D>().radius = 0.2f;
+                    if (i == gridWidth / 2)
+                    {
+                        Point.symAxePoints.Add(obj.transform.position);
+
+                    }
                 }
+                //-------------------
+                
                 //-------------------
                 else 
                 {
@@ -54,7 +61,7 @@ public class orsom : MonoBehaviour
             }
         }
         
-        print("Count : "+Point.leftSidePoints.Count);
-        Point.leftSidePoints.ForEach(e => print("Pos X :"+e));
+        //print("Count : "+Point.leftSidePoints.Count);
+        //Point.leftSidePoints.ForEach(e => print("Pos X :"+e));
     }
 }
