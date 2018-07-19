@@ -18,6 +18,9 @@ public class Point : MonoBehaviour
     public static List<Vector3> symAxePoints = new List<Vector3>();
     public static List<Shape> leftSideShapes = new List<Shape>();
 
+    public static List<Vector3> rightSidePoints = new List<Vector3>();
+    public static List<List<Vector3>> rightSideLinks = new List<List<Vector3>>();
+
 
 
 
@@ -40,7 +43,7 @@ public class Point : MonoBehaviour
             
             prepareLeftSideForms();
             //waht shape to draw ?
-            currentshape = leftSideShapes[2];
+            currentshape = leftSideShapes[1];
             drawShape(currentshape);
 
         }
@@ -61,7 +64,7 @@ public class Point : MonoBehaviour
     {
         totalClicks++;
         selectedPoints.Add(this);
-        print("selected :" + selectedPoints.Count);
+        //print("selected :" + selectedPoints.Count);
     }
    
     //==================================================================
@@ -79,7 +82,7 @@ public class Point : MonoBehaviour
 
             float distance = Vector3.Distance(posA.transform.position, posB.transform.position);
             string dd = (distance == Mathf.Sqrt(2)) ? "SQRT(2)" : distance.ToString();
-            print(dd);
+            //print(dd);
             if (distance <= Mathf.Sqrt(2))
             {
                 GameObject lrPf = Instantiate(lineRendererPF);
@@ -88,8 +91,24 @@ public class Point : MonoBehaviour
 
                 lineRenderer.SetPosition(0, posA.transform.position);
                 lineRenderer.SetPosition(1, posB.transform.position);
-
+                /**/
+                //print(posA.transform.position);
                 twoPointsArrayList.RemoveAt(0);
+                //-------------------------------------------------------
+                rightSidePoints.Add(posA.transform.position);
+                rightSidePoints.Add(posB.transform.position);
+                //+++++++++++++++++++++++++++++++++++++++++++++++++++++++
+                List<Vector3> vectors = new List<Vector3>();
+                //print(Vector3.Cross(new Vector3(2,2,2), new Vector3(-1, 1, 1)));
+                vectors.Add(posB.transform.position);
+                rightSideLinks.Add(vectors);
+
+                rightSideLinks.ForEach(
+                        e =>
+                        {
+                            //print(currentshape.getPointsLinks().Contains(e));
+                        }
+                    );
             }
             else
             {
@@ -118,7 +137,7 @@ public class Point : MonoBehaviour
     {
         for (int i = 0; i < symAxePoints.Count - 1; i++)
         {
-            //print(i+":"+(i+1));
+            
             drawFromTo(symAxePoints[i], symAxePoints[i + 1]);
         }
     }
@@ -126,15 +145,14 @@ public class Point : MonoBehaviour
     public void drawShape(Shape shape)
     {
         List<Vector3> pointsList = shape.getPointsList();
-        List<int> pointsLinks = shape.getPointsLinks();
-
-        for (int i = 0; i < shape.getPointsLinks().Count - 1; i++)
+        List<List<Vector3>> pointsLinks = shape.getPointsLinks();
+        for (int i = 0; i < shape.getPointsLinks().Count; i++)
         {
-            
+           
 
-            Vector3 posA = pointsList[pointsLinks[i]];
-            Vector3 posB = pointsList[pointsLinks[i+1]];
-            //lineRenderer.SetPosition(1, pointsList[pointsLinks[i + 1]]);
+            Vector3 posA = (pointsLinks[i])[0];
+            Vector3 posB = (pointsLinks[i])[1];
+            
             drawFromTo(posA,posB);
 
 
@@ -148,35 +166,42 @@ public class Point : MonoBehaviour
         int[] firstShapeLinks = { 10, 5, 1, 2, 7, 6, 11, 12, 8, 3, 9, 14 };
         int[] secondShapeLinks = { 10, 5, 0, 1, 6, 7, 2, 3, 4, 9, 14 };
         int[] thirdShapeLinks = { 11, 5, 0, 1, 7, 2, 3, 4, 9, 13 };
-
+        List<Vector3> vectors = new List<Vector3>();
+        List<List<Vector3>> vect = new List<List<Vector3>>();
+        
         //shapePoints gathers all of the points forming the shape
         List<Vector3> shapePoints = new List<Vector3>();
         //First Shape
         Shape firstShape = new Shape();
-
-        firstShape.prepareLinks(firstShapeLinks);
+        
         //Gathering shape's points including those of the symAxe
         shapePoints.AddRange(leftSidePoints);
         shapePoints.AddRange(symAxePoints);
         //Setting shape points lit
         firstShape.setPointsList(shapePoints);
-        //******************************************************************
+        firstShape.prepareLinks(firstShapeLinks);
+
+        
+        ///******************************************************************
         //******************************************************************
         //Second Shape
         Shape secondShape = new Shape();
-        secondShape.prepareLinks(secondShapeLinks);
+        //
         shapePoints.AddRange(leftSidePoints);
         shapePoints.AddRange(symAxePoints);
 
-        secondShape.setPointsList(shapePoints);//******************************************************************
+        secondShape.setPointsList(shapePoints);
+        secondShape.prepareLinks(secondShapeLinks);
+        //******************************************************************
         //******************************************************************
         //third Shape
         Shape thirdShape = new Shape();
-        thirdShape.prepareLinks(thirdShapeLinks);
+        //
         shapePoints.AddRange(leftSidePoints);
         shapePoints.AddRange(symAxePoints);
 
         thirdShape.setPointsList(shapePoints);
+        thirdShape.prepareLinks(thirdShapeLinks);
         //--------------filling the list of the premade left shapes----------------------
         leftSideShapes.Add(firstShape);
         leftSideShapes.Add(secondShape);
@@ -191,7 +216,7 @@ public class Shape
     public GameObject lineRendererPF;//lineRenderPrefab
 
     private List<Vector3> pointsList = new List<Vector3>();
-    private List<int> pointsLinks = new List<int> ();
+    private List<List<Vector3>> pointsLinks = new List<List<Vector3>> ();
 
     public void setPointsList(List<Vector3> pointsList) {
         this.pointsList.AddRange(pointsList);
@@ -199,33 +224,25 @@ public class Shape
     //==============================================
     public List<Vector3> getPointsList() { return pointsList; }
     //==============================================
-    public void setPointsLinks(List<int> pointsLinks)
+    public void setPointsLinks(List<List<Vector3>> pointsLinks)
     {
         this.pointsLinks.AddRange(pointsLinks);
     }
     //==============================================
-    public List<int> getPointsLinks() { return pointsLinks; }
-    //==============================================
-    public void drawShape(GameObject LineRendererPfInstance)
-    {
-        for (int i = 0; i < pointsLinks.Count - 1; i++)
-        {
-            //GameObject lrPf = Instantiate(lineRendererPF);
-            lineRenderer = LineRendererPfInstance.GetComponent<LineRenderer>();
-            //Debug.Log((pointsList[pointsLinks[i]]+new Vector3(10,4,0)) + " |--> "+ (pointsList[pointsLinks[i+1]] + new Vector3(10, 4, 0)));
-
-            lineRenderer.SetPosition(0, pointsList[pointsLinks[i]]);
-            lineRenderer.SetPosition(1, pointsList[pointsLinks[i+1]]);
-            
-            
-        }
-    }
+    public List<List<Vector3>> getPointsLinks() { return pointsLinks; }
+    
     //===============================================
     public void prepareLinks(int[] links)
     {
-        for (int i = 0; i < links.Length; i++)
+        for (int i = 0; i < links.Length- 1; i++)
         {
-            pointsLinks.Add(links[i]);
+            List<Vector3> vect = new List<Vector3>();
+
+            vect.Add(getPointsList()[links[i]]);
+            vect.Add(getPointsList()[links[i+1]]);
+
+            getPointsLinks().Add(vect);
+
         }
     }
 }
