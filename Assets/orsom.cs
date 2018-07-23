@@ -20,6 +20,8 @@ public class orsom : MonoBehaviour
     public GameObject pointPf;//pointPrefab
 
     public int[] grid;
+
+    
      
     //============================================================================================
     void Start()
