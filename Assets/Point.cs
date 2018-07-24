@@ -23,6 +23,9 @@ public class Point : MonoBehaviour
 
     //public Text movesText;
     public Text moves;
+    //------------------------------
+    public GameObject endOfGamePanel;
+    public Text resultMessage;
 
 
     //-------------------
@@ -36,6 +39,10 @@ public class Point : MonoBehaviour
     void Start()
     {
         moves = orsom.instance.text;
+        endOfGamePanel = orsom.instance.endOfGamePanel;
+        resultMessage = orsom.instance.resultMessage;
+        //Time.timeScale = 1f;
+        endOfGamePanel.gameObject.SetActive(false);
         //Instantiate(lineRendererPF);
         drawSymAxe();
 
@@ -48,6 +55,7 @@ public class Point : MonoBehaviour
             drawShape(currentshape);
 
         }
+        moves.text = "Moves : " + (currentshape.getPointsLinks().Count);
     }
     //====================================================
     private void Awake()
@@ -114,12 +122,17 @@ public class Point : MonoBehaviour
                 {
                     print(rightSideLinks.Count + " <= ? " + currentshape.getPointsLinks().Count);
                     //--------------------------------
-                    //moves.text = "Moves : " + (currentshape.getPointsLinks().Count - rightSideLinks.Count);
+                    moves.text = "Moves : " + (currentshape.getPointsLinks().Count - rightSideLinks.Count);
                     //--------------------------------
-                    string stringResult = winGame() ? "You win :)" : "You lose,Try again :(";
+                    string stringResult = winGame() ? "You win :)" : "You lose\nTry again :(";
                     if (rightSideLinks.Count == currentshape.getPointsLinks().Count)
                     {
                         print(stringResult);
+                        
+                        
+                        resultMessage.text = stringResult;
+                        Time.timeScale = 0f;
+                        endOfGamePanel.gameObject.SetActive(true);
                     }
                 }
             }

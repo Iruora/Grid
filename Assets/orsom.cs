@@ -21,6 +21,9 @@ public class orsom : MonoBehaviour
 
     public int[] grid;
     public Text text;
+    //---------------------------------------------
+    public GameObject endOfGamePanel;
+    public Text resultMessage;
 
 
     public static orsom instance = null;              //Static instance of GameManager which allows it to be accessed by any other script.
