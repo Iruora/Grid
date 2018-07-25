@@ -51,7 +51,7 @@ public class Point : MonoBehaviour
             
             prepareLeftSideForms();
             //waht shape to draw ?
-            currentshape = leftSideShapes[0];
+            currentshape = leftSideShapes[1];
             drawShape(currentshape);
 
         }
