@@ -45,6 +45,7 @@ public class orsom : MonoBehaviour
 
     public static int totalClicks = 0;
     //---------------------------------------------
+    public static int shapeIndex = 0;
     //---------------------------------------------
 
 
@@ -119,7 +120,8 @@ public class orsom : MonoBehaviour
 
             prepareLeftSideForms();
             //waht shape to draw ?
-            currentshape = leftSideShapes[2];
+            print("Index : "+shapeIndex);
+            currentshape = leftSideShapes[shapeIndex];
             drawShape(currentshape);
 
         }
@@ -237,10 +239,7 @@ public class orsom : MonoBehaviour
 
             
             drawFromTo(posA, posB);
-            print("****************************");
-            print("vect :"+ new VectorMath(posA,posB));
-            print("sym :"+ (new VectorMath(posA,posB)).getSymetric());
-            print("****************************");
+            
 
 
         }
