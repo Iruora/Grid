@@ -1,168 +1,110 @@
 Base path: C:/Program Files/Unity/Editor/Data
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
-Cmd: initializeCompiler
+Cmd: getPlatforms
+Cmd: preprocess
+  insize=2221 outsize=1077 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1453 outsize=674 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1453 outsize=666 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: preprocess
+  insize=3433 outsize=2547 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=16424 outsize=3890 kw=DIRECTIONAL pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=16424 outsize=3302 kw=DIRECTIONAL pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1121 outsize=1046 kw=SHADOWS_DEPTH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1121 outsize=470 kw=SHADOWS_DEPTH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: preprocess
+  insize=9844 outsize=3827 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6327 outsize=2994 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6327 outsize=1730 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: preprocess
+  insize=4252 outsize=3549 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=16755 outsize=3890 kw=DIRECTIONAL pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=16755 outsize=6210 kw=DIRECTIONAL pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=11394 outsize=3602 kw=POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=11394 outsize=4854 kw=POINT pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1109 outsize=1046 kw=SHADOWS_DEPTH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1109 outsize=470 kw=SHADOWS_DEPTH pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: preprocess
+  insize=6903 outsize=2360 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4850 outsize=3034 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4850 outsize=682 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: preprocess
+  insize=7613 outsize=2629 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5293 outsize=3034 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5293 outsize=1102 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: preprocess
+  insize=6937 outsize=2372 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4874 outsize=3034 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4874 outsize=778 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: preprocess
+  insize=3271 outsize=1607 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1973 outsize=1322 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1973 outsize=602 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: preprocess
+  insize=9853 outsize=3838 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6326 outsize=2994 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6326 outsize=1730 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: preprocess
+  insize=3357 outsize=1244 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=2422 outsize=1610 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=2422 outsize=710 kw= pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4874 outsize=3638 kw=UNDERLAY_ON OUTLINE_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4874 outsize=1198 kw=UNDERLAY_ON OUTLINE_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6326 outsize=3570 kw=GLOW_ON BEVEL_ON UNDERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6326 outsize=5446 kw=GLOW_ON BEVEL_ON UNDERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=16755 outsize=3890 kw=DIRECTIONAL GLOW_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=16755 outsize=7150 kw=DIRECTIONAL GLOW_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=11394 outsize=3602 kw=DIRECTIONAL GLOW_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=11394 outsize=5418 kw=DIRECTIONAL GLOW_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1023 outsize=2054 kw=DIRECTIONAL _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1023 outsize=6402 kw=DIRECTIONAL _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=949 outsize=1758 kw=DIRECTIONAL _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=949 outsize=3042 kw=DIRECTIONAL _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=6326 outsize=3570 kw=GLOW_ON UNDERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=6326 outsize=2566 kw=GLOW_ON UNDERLAY_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=4874 outsize=3034 kw=OUTLINE_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=4874 outsize=858 kw=OUTLINE_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1023 outsize=2054 kw=DIRECTIONAL _EMISSION _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1023 outsize=6506 kw=DIRECTIONAL _EMISSION _NORMALMAP pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING SHADER_API_DESKTOP UNITY_COLORSPACE_GAMMA ok=1

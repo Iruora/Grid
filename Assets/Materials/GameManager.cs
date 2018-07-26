@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     public GameObject EndGamePanel;
@@ -17,19 +18,17 @@ public class GameManager : MonoBehaviour {
     {
         Application.Quit();
     }
-    public void SetCurrentShapeIndexToFirst()
+
+    public void GoHome()
     {
-        orsom.shapeIndex = 0;
-        print("0?"+orsom.shapeIndex);
+        
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        print("exec");
     }
-    public void SetCurrentShapeIndexToSecond()
+
+    public void Reload()
     {
-        orsom.shapeIndex = 1;
-        print("1?" + orsom.shapeIndex);
+        SceneManager.LoadScene(1, LoadSceneMode.Single);
     }
-    public void SetCurrentShapeIndexToThird()
-    {
-        orsom.shapeIndex = 2;
-        print("2?" + orsom.shapeIndex);
-    }
+
 }

@@ -76,8 +76,10 @@ public class orsom : MonoBehaviour
     
      
     //============================================================================================
-    void Start()
+    void OnLevelWasLoaded()
     {
+        
+        print("orsom started");
         //instantiating the grid
         grid = new int[gridHeight * gridWidth];
         //filling the grid
@@ -120,7 +122,7 @@ public class orsom : MonoBehaviour
 
             prepareLeftSideForms();
             //waht shape to draw ?
-            print("Index : "+shapeIndex);
+            //print("Index : "+shapeIndex);
             currentshape = leftSideShapes[shapeIndex];
             drawShape(currentshape);
 
@@ -137,6 +139,11 @@ public class orsom : MonoBehaviour
         drawLine(selectedPoints);
 
     }
+    void OnDisable()
+    {
+        Debug.Log("PrintOnDisable: script was disabled");
+    }
+
     public void drawLine(ArrayList twoPointsArrayList)
     {
         if (twoPointsArrayList.Count == 2)
@@ -149,7 +156,7 @@ public class orsom : MonoBehaviour
             //----------------------------------------
 
             float distance = Vector3.Distance(posA.transform.position, posB.transform.position);
-            string dd = (distance == Mathf.Sqrt(2)) ? "SQRT(2)" : distance.ToString();
+            //string dd = (distance == Mathf.Sqrt(2)) ? "SQRT(2)" : distance.ToString();
             //print(dd);
             if (distance <= Mathf.Sqrt(2) && !(rightSideLinks.Contains(AB)) && !(rightSideLinks.Contains(AB.reverse())))
             {
@@ -178,14 +185,14 @@ public class orsom : MonoBehaviour
                     //print("*************left**************");
                     //currentshape.getPointsLinks().ForEach(e => print(e.getSymetric()));
                     //print("*************/left**************");
-                    print(rightSideLinks.Count + " <= ? " + currentshape.getPointsLinks().Count);
+                    //print(rightSideLinks.Count + " <= ? " + currentshape.getPointsLinks().Count);
                     //--------------------------------
                     moves.text = "Moves : " + (currentshape.getPointsLinks().Count - rightSideLinks.Count);
                     //--------------------------------
                     string stringResult = winGame() ? "You win :)" : "You lose\nTry again :(";
                     if (rightSideLinks.Count == currentshape.getPointsLinks().Count)
                     {
-                        print(stringResult);
+                        //print(stringResult);
 
 
                         resultMessage.text = stringResult;
@@ -345,7 +352,7 @@ public class orsom : MonoBehaviour
                 b = rightSideLinks.Contains(e.getSymetric()) || rightSideLinks.Contains(e.reverse().getSymetric());
                
                 bools.Add(b);
-                print(b);
+                //print(b);
             }
         );
         
