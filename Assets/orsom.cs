@@ -46,6 +46,9 @@ public class orsom : MonoBehaviour
     public static int totalClicks = 0;
     //---------------------------------------------
     public static int shapeIndex = 0;
+    public static List<GameObject> Lines = new List<GameObject>();
+    public static List<GameObject> leftDrawnShapes = new List<GameObject>();
+    public static List<GameObject> leftDrawnPoints = new List<GameObject>();
     //---------------------------------------------
 
 
@@ -54,6 +57,7 @@ public class orsom : MonoBehaviour
     //Awake is always called before any Start functions
     void Awake()
     {
+        //orsom.instance.enabled = true;
         //Check if instance already exists
         if (instance == null)
 
@@ -67,7 +71,7 @@ public class orsom : MonoBehaviour
             Destroy(gameObject);
 
         //Sets this to not be destroyed when reloading scene
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
 
@@ -76,7 +80,7 @@ public class orsom : MonoBehaviour
     
      
     //============================================================================================
-    void OnLevelWasLoaded()
+    void Start()
     {
         
         print("orsom started");
@@ -90,6 +94,7 @@ public class orsom : MonoBehaviour
                 //Intantiate a GameObject from the prefab "pointPf" and locate it at "startPosition" (initialisation in the unity editor)
                 //with a translation forEach point by the vector u(i,i,0)
                 GameObject obj = Instantiate(pointPf, startPosition + new Vector3(i, j, 0), Quaternion.identity);
+                leftDrawnPoints.Add(obj);
                 //-----------------------------------------
                 //Add Circle colider only to the right side including the symetrie axe
                 if (i >=  gridWidth / 2)
@@ -126,6 +131,7 @@ public class orsom : MonoBehaviour
             drawShape(currentshape);
 
         }
+        moves.gameObject.SetActive(true);
         moves.text = "Moves : " + (currentshape.getPointsLinks().Count);
         //========================================
 
@@ -143,6 +149,11 @@ public class orsom : MonoBehaviour
         Debug.Log("PrintOnDisable: script was disabled");
     }
 
+    void OnEnable()
+    {
+        Debug.Log("PrintOnEnable: script was enabled");
+    }
+
     public void drawLine(ArrayList twoPointsArrayList)
     {
         if (twoPointsArrayList.Count == 2)
@@ -157,7 +168,7 @@ public class orsom : MonoBehaviour
             float distance = Vector3.Distance(posA.transform.position, posB.transform.position);
             //string dd = (distance == Mathf.Sqrt(2)) ? "SQRT(2)" : distance.ToString();
             //print(dd);
-            if (distance <= Mathf.Sqrt(2) && !(rightSideLinks.Contains(AB)) && !(rightSideLinks.Contains(AB.reverse())))
+            if (distance > 0 && distance <= Mathf.Sqrt(2) && !(rightSideLinks.Contains(AB)) && !(rightSideLinks.Contains(AB.reverse())))
             {
                 GameObject lrPf = Instantiate(lineRendererPF);
                 lineRenderer = lrPf.GetComponent<LineRenderer>();
@@ -165,7 +176,9 @@ public class orsom : MonoBehaviour
 
                 lineRenderer.SetPosition(0, posA.transform.position);
                 lineRenderer.SetPosition(1, posB.transform.position);
-                
+
+
+                Lines.Add(lineRenderer.gameObject);
                 twoPointsArrayList.RemoveAt(0);
                 //twoPointsArrayList.Clear();
                 //-------------------------------------------------------
@@ -219,6 +232,7 @@ public class orsom : MonoBehaviour
         {
             lineRenderer.SetPosition(0, from);
             lineRenderer.SetPosition(1, to);
+            leftDrawnShapes.Add(lineRenderer.gameObject);
         }
 
     }
@@ -362,7 +376,68 @@ public class orsom : MonoBehaviour
         return result;
     }
    //===================================================
+   public void Restart()
+    {
+        rightSideLinks.Clear();
+        rightSidePoints.Clear();
+        selectedPoints.Clear();
+        if (Lines.Count != 0)
+        {
+            Lines.ForEach(
+                e =>
+                {
+
+                    if (e != null)
+                    {
+                        e.SetActive(false);
+                        Destroy(e);
+                    }
+                }
+            );
+        }
+
+        if (leftDrawnPoints.Count != 0)
+        {
+            leftDrawnPoints.ForEach(
+                e =>
+                {
+
+                    if (e != null)
+                    {
+                        e.SetActive(false);
+                        Destroy(e);
+                    }
+                }
+            );
+        }
+
+        if (leftDrawnShapes.Count != 0)
+        {
+            leftDrawnShapes.ForEach(
+                e =>
+                {
+
+                    if (e != null)
+                    {
+                        e.SetActive(false);
+                        Destroy(e);
+                    }
+                }
+            );
+        }
+        Start();
+    }
+    //===================================================
+    public void RestartBss()
+    {
+        rightSideLinks.Clear();
+        rightSidePoints.Clear();
+        selectedPoints.Clear();
+        
+        Start();
+    }
 }
+
 //======================================================
 /************************ShapeClass************************/
 //======================================================

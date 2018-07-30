@@ -21,14 +21,12 @@ public class GameManager : MonoBehaviour {
 
     public void GoHome()
     {
+        print("LoadMode");
+        orsom.instance.enabled = true;
         
-        SceneManager.LoadScene(0, LoadSceneMode.Single);
-        print("exec");
-    }
+        SceneManager.LoadScene(0);
 
-    public void Reload()
-    {
-        SceneManager.LoadScene(1, LoadSceneMode.Single);
+        
     }
 
 }
