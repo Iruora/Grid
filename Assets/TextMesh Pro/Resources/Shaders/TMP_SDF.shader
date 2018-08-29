@@ -117,9 +117,6 @@ SubShader {
 		#pragma shader_feature __ UNDERLAY_ON UNDERLAY_INNER
 		#pragma shader_feature __ GLOW_ON
 
-		#pragma multi_compile __ UNITY_UI_CLIP_RECT
-		#pragma multi_compile __ UNITY_UI_ALPHACLIP
-
 
 		#include "UnityCG.cginc"
 		#include "UnityUI.cginc"
@@ -161,8 +158,7 @@ SubShader {
 			float4 vert = input.position;
 			vert.x += _VertexOffsetX;
 			vert.y += _VertexOffsetY;
-
-			float4 vPosition = UnityObjectToClipPos(vert);
+			float4 vPosition = mul(UNITY_MATRIX_MVP, vert);
 
 			float2 pixelSize = vPosition.w;
 			pixelSize /= float2(_ScaleX, _ScaleY) * abs(mul((float2x2)UNITY_MATRIX_P, _ScreenParams.xy));
@@ -284,14 +280,8 @@ SubShader {
 		#endif
 
 		// Alternative implementation to UnityGet2DClipping with support for softness.
-		#if UNITY_UI_CLIP_RECT
-			half2 m = saturate((_ClipRect.zw - _ClipRect.xy - abs(input.mask.xy)) * input.mask.zw);
-			faceColor *= m.x * m.y;
-		#endif
-
-		#if UNITY_UI_ALPHACLIP
-			clip(faceColor.a - 0.001);
-		#endif
+		half2 m = saturate((_ClipRect.zw - _ClipRect.xy - abs(input.mask.xy)) * input.mask.zw);
+		faceColor *= m.x * m.y;
 
   		return faceColor * input.color.a;
 		}

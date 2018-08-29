@@ -23,10 +23,23 @@ public class GameManager : MonoBehaviour {
     {
         print("LoadMode");
         orsom.instance.enabled = true;
-        
+        BackGroundMusic instance = BackGroundMusic.Instance;
+        if (instance != null)
+        {
+            instance.Mute();
+        }
         SceneManager.LoadScene(0);
 
         
+    }
+
+    public void MuteInMain()
+    {
+        BackGroundMusic instance = BackGroundMusic.Instance;
+        if ( instance != null)
+        {
+            instance.Mute();
+        }
     }
 
 }
