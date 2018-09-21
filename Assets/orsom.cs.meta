@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: b88ead1eb8bc90947a474641d5b3dcab
-timeCreated: 1531859326
-licenseType: Free
 MonoImporter:
+  externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - lineRendererPF: {fileID: 1142626046363734, guid: b4f2f49a7ac496d45a3f8e04a1f4fa42,
+      type: 2}
+  - pointPf: {fileID: 1913973320771324, guid: 134c9fbcc87954d46a399dad6806fcc0, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
